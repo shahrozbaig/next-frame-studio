@@ -4,67 +4,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Next Frame Studio</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-white text-gray-900">
 
-<header>
-  <nav>
-    <div class="logo">
-      <img src="Logo.png" alt="Next Frame Studio Logo">
-      <span>Next Frame Studio</span>
-    </div>
-  </nav>
+<!-- HEADER -->
+<header class="bg-black text-white p-4">
+  <div class="container mx-auto flex items-center gap-4">
+    <img src="Logo.png" alt="Logo" class="h-10">
+    <span class="font-bold text-xl">Next Frame Studio</span>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>Reels That Convert</h1>
-  <p>Short-form edits built for growth</p>
+<!-- HERO -->
+<section class="hero bg-black text-white text-center py-20">
+  <h1 class="text-4xl font-bold mb-4">Reels That Convert</h1>
+  <p class="text-lg">Short-form edits built for growth</p>
 </section>
 
-<section id="portfolio">
-  <h2>Reels Portfolio</h2>
-  <div class="reels-grid">
-
-    <div class="reel-card">
-      <video src="videos/project 1.mp4" autoplay loop playsinline controls></video>
+<!-- REELS VIDEOS -->
+<section id="portfolio" class="py-12">
+  <h2 class="text-3xl font-bold text-center mb-8">Reels Portfolio</h2>
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
+    <div class="w-60 h-[390px] rounded-xl overflow-hidden shadow-lg">
+      <video src="videos/project 1.mp4" autoplay loop playsinline controls class="w-full h-full object-cover"></video>
     </div>
-    <div class="reel-card">
-      <video src="videos/project 2.mp4" autoplay loop playsinline controls></video>
+    <div class="w-60 h-[390px] rounded-xl overflow-hidden shadow-lg">
+      <video src="videos/project 2.mp4" autoplay loop playsinline controls class="w-full h-full object-cover"></video>
     </div>
-    <div class="reel-card">
-      <video src="videos/project 3.mp4" autoplay loop playsinline controls></video>
+    <div class="w-60 h-[390px] rounded-xl overflow-hidden shadow-lg">
+      <video src="videos/project 3.mp4" autoplay loop playsinline controls class="w-full h-full object-cover"></video>
     </div>
-
   </div>
 </section>
 
-<section id="clients">
-  <h2>What Our Clients Say</h2>
-  <div class="client-carousel">
+<!-- CLIENT REVIEWS SLIDER -->
+<section id="clients" class="py-16 bg-gray-100">
+  <div class="container mx-auto text-center mb-8">
+    <h2 class="text-3xl font-bold mb-4">What Our Clients Say 🌟</h2>
+    <p class="text-gray-600">We help brands create videos that truly perform.</p>
+  </div>
 
-    <div class="review-card fade-in">
-      <p>"Next Frame Studio transformed our social media content! Our engagement skyrocketed in just weeks."</p>
-      <span>- Emily R., New York, USA</span>
+  <div class="relative max-w-5xl mx-auto">
+    <!-- Slider Track -->
+    <div id="reviewTrack" class="flex gap-6 overflow-x-hidden scroll-smooth transition-transform duration-500">
+      <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+        <p class="text-gray-800 mb-3">🎯 "Next Frame Studio transformed our social media content! Our engagement skyrocketed in just weeks."</p>
+        <span class="font-semibold text-gray-600">- Emily R., New York, USA</span>
+      </div>
+      <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+        <p class="text-gray-800 mb-3">💡 "Amazing work! The reels look professional and really capture our brand essence."</p>
+        <span class="font-semibold text-gray-600">- John D., Los Angeles, USA</span>
+      </div>
+      <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+        <p class="text-gray-800 mb-3">🚀 "We saw a huge increase in leads after using Next Frame Studio's video editing services."</p>
+        <span class="font-semibold text-gray-600">- Sarah K., Chicago, USA</span>
+      </div>
+      <div class="flex-shrink-0 w-80 bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+        <p class="text-gray-800 mb-3">🔥 "Highly recommend! Their videos helped us boost our brand awareness tremendously."</p>
+        <span class="font-semibold text-gray-600">- Mike T., Miami, USA</span>
+      </div>
     </div>
 
-    <div class="review-card fade-in">
-      <p>"Amazing work! The reels look professional and really capture our brand essence."</p>
-      <span>- John D., Los Angeles, USA</span>
-    </div>
-
-    <div class="review-card fade-in">
-      <p>"We saw a huge increase in leads after using Next Frame Studio's video editing services."</p>
-      <span>- Sarah K., Chicago, USA</span>
-    </div>
-
+    <!-- Arrows -->
+    <button id="prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800">
+      &#10094;
+    </button>
+    <button id="next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-black text-white p-3 rounded-full shadow-lg hover:bg-gray-800">
+      &#10095;
+    </button>
   </div>
 </section>
 
-<footer>
+<footer class="bg-black text-white text-center p-4 mt-8">
   © 2025 Next Frame Studio
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+

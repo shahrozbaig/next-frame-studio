@@ -1,19 +1,22 @@
-// Mobile Menu
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+// Client reviews slider
+const track = document.getElementById('reviewTrack');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const cardWidth = 320; // card width + gap
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+let index = 0;
+
+nextBtn.addEventListener('click', () => {
+  const maxIndex = track.children.length - Math.floor(track.parentElement.offsetWidth / cardWidth);
+  if(index < maxIndex){
+    index++;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
 });
 
-// Popup trigger (after 4 seconds)
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closePopup");
-
-setTimeout(() => {
-  popup.style.display = "flex";
-}, 4000);
-
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
+prevBtn.addEventListener('click', () => {
+  if(index > 0){
+    index--;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
 });
