@@ -8,20 +8,10 @@
 </head>
 <body>
 
-<!-- POPUP -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close" id="closePopup">&times;</span>
-    <h2>🚀 Get Your Video Sales Boost Now</h2>
-    <p>High-converting reels for brands & creators</p>
-    <a href="mailto:nextframestudio@email.com?subject=Boost My Video Sales" class="popup-btn">Contact via Email</a>
-  </div>
-</div>
-
 <header>
   <nav>
     <div class="logo">
-      <img src="Logo.png" alt="Next Frame Studio">
+      <img src="Logo.png" alt="Next Frame Studio Logo">
       <span>Next Frame Studio</span>
     </div>
   </nav>
@@ -35,38 +25,39 @@
 <section id="portfolio">
   <h2>Reels Portfolio</h2>
   <div class="reels-grid">
-
     <div class="reel-card">
-      <video src="videos/project 1.mp4" class="video"></video>
-      <div class="controls">
-        <button onclick="playPause(this)">▶</button>
-        <button onclick="stopVideo(this)">⏹</button>
-        <button onclick="muteUnmute(this)">🔊</button>
-      </div>
+      <video src="videos/project 1.mp4" autoplay muted loop playsinline></video>
     </div>
-
     <div class="reel-card">
-      <video src="videos/project 2.mp4" class="video"></video>
-      <div class="controls">
-        <button onclick="playPause(this)">▶</button>
-        <button onclick="stopVideo(this)">⏹</button>
-        <button onclick="muteUnmute(this)">🔊</button>
-      </div>
+      <video src="videos/project 2.mp4" autoplay muted loop playsinline></video>
     </div>
-
     <div class="reel-card">
-      <video src="videos/project 3.mp4" class="video"></video>
-      <div class="controls">
-        <button onclick="playPause(this)">▶</button>
-        <button onclick="stopVideo(this)">⏹</button>
-        <button onclick="muteUnmute(this)">🔊</button>
-      </div>
+      <video src="videos/project 3.mp4" autoplay muted loop playsinline></video>
     </div>
-
   </div>
 </section>
 
-<footer>© 2025 Next Frame Studio</footer>
+<section id="clients">
+  <h2>What Our Clients Say</h2>
+  <div class="client-reviews">
+    <div class="review-card fade-in">
+      <p>"Next Frame Studio transformed our social media content! Our engagement skyrocketed in just weeks."</p>
+      <span>- Emily R., New York, USA</span>
+    </div>
+    <div class="review-card fade-in">
+      <p>"Amazing work! The reels look professional and really capture our brand essence."</p>
+      <span>- John D., Los Angeles, USA</span>
+    </div>
+    <div class="review-card fade-in">
+      <p>"We saw a huge increase in leads after using Next Frame Studio's video editing services."</p>
+      <span>- Sarah K., Chicago, USA</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Next Frame Studio
+</footer>
 
 <script src="script.js"></script>
 </body>
