@@ -4,60 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Next Frame Studio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- POPUP -->
-<div class="popup-overlay" id="popup">
-  <div class="popup-box pop-animate">
-    <span class="close-btn" id="closePopup">&times;</span>
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close" id="closePopup">&times;</span>
     <h2>🚀 Get Your Video Sales Boost Now</h2>
     <p>High-converting reels for brands & creators</p>
-    <a href="mailto:nextframestudio@email.com?subject=Boost My Video Sales"
-       class="popup-cta">Email Us Now</a>
+    <a href="mailto:nextframestudio@email.com?subject=Boost My Video Sales" class="popup-btn">Contact via Email</a>
   </div>
 </div>
 
 <header>
-  <nav class="nav">
+  <nav>
     <div class="logo">
       <img src="Logo.png" alt="Next Frame Studio">
       <span>Next Frame Studio</span>
     </div>
-
-    <div class="menu-toggle" id="menuToggle">☰</div>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Reels</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </nav>
 </header>
 
 <section class="hero">
-  <h1 class="slide-in">Reels That Convert</h1>
-  <p class="fade-in">Short-form edits built for growth</p>
-  <a href="#portfolio" class="btn pulse">View Reels</a>
-</section>
-
-<section id="services">
-  <h2 class="fade-in">Services</h2>
-  <div class="cards">
-    <div class="card float">Instagram & TikTok Reels</div>
-    <div class="card float">YouTube Shorts</div>
-    <div class="card float">Video Ads</div>
-  </div>
+  <h1>Reels That Convert</h1>
+  <p>Short-form edits built for growth</p>
 </section>
 
 <section id="portfolio">
-  <h2 class="fade-in">Reels Portfolio</h2>
+  <h2>Reels Portfolio</h2>
+  <div class="reels-grid">
 
-  <div class="reels-columns">
-    <!-- VIDEO 1 -->
     <div class="reel-card">
-      <video src="videos/project 1.mp4"></video>
+      <video src="videos/project 1.mp4" class="video"></video>
       <div class="controls">
         <button onclick="playPause(this)">▶</button>
         <button onclick="stopVideo(this)">⏹</button>
@@ -65,9 +45,8 @@
       </div>
     </div>
 
-    <!-- VIDEO 2 -->
     <div class="reel-card">
-      <video src="videos/project 2.mp4"></video>
+      <video src="videos/project 2.mp4" class="video"></video>
       <div class="controls">
         <button onclick="playPause(this)">▶</button>
         <button onclick="stopVideo(this)">⏹</button>
@@ -75,21 +54,16 @@
       </div>
     </div>
 
-    <!-- VIDEO 3 -->
     <div class="reel-card">
-      <video src="videos/project 3.mp4"></video>
+      <video src="videos/project 3.mp4" class="video"></video>
       <div class="controls">
         <button onclick="playPause(this)">▶</button>
         <button onclick="stopVideo(this)">⏹</button>
         <button onclick="muteUnmute(this)">🔊</button>
       </div>
     </div>
+
   </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:nextframestudio@email.com">nextframestudio@email.com</a></p>
 </section>
 
 <footer>© 2025 Next Frame Studio</footer>
